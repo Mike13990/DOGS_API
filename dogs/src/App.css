@@ -14,7 +14,7 @@ body {
 }
 
 .contenedor {
-  width: 90%; /* Obliga a estirarse */
+  width: 90%;
   max-width: 1400px; 
   margin: 0 auto;
   padding: 40px 20px;
@@ -31,21 +31,17 @@ body {
   letter-spacing: 1px;
 }
 
-/* Sistema de cuadrícula para 4 a 5 columnas */
 .grid {
   display: grid;
-  /* minmax(220px, 1fr) asegura que entren hasta 5 en pantallas grandes */
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 25px;
   padding: 10px;
 }
 
-/* Diseño de cada tarjeta */
 .card {
   background-color: #ffffff;
   border-radius: 16px;
   padding: 20px;
-  /* Sombra más suave y moderna */
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
   display: flex;
   flex-direction: column;
@@ -60,17 +56,15 @@ body {
   border-color: #e2e8f0;
 }
 
-/* Estilo para las fotografías de los perros */
 .card img {
   border-radius: 12px;
   margin-bottom: 15px;
   width: 100%;
   height: 180px;
-  object-fit: cover; /* Esto asegura que la foto se recorte perfecto sin deformarse */
+  object-fit: cover;
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-/* Textos dentro de la tarjeta */
 .card h2 {
   margin: 0 0 8px 0;
   color: #102a43;
@@ -88,6 +82,6 @@ body {
 }
 
 .card p strong {
-  color: #d97706; /* Color ámbar para resaltar el número */
+  color: #d97706;
   font-weight: 700;
 }
