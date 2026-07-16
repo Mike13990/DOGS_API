@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #a19696; 
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+}
+
+#root {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.contenedor {
+  width: 90%; /* Obliga a estirarse */
+  max-width: 1400px; 
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f0f4f8; 
+  min-height: 100vh;
+}
+
+.contenedor h1 {
+  color: #102a43;
+  margin-bottom: 40px;
+  font-size: 2.8rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* Sistema de cuadrícula para 4 a 5 columnas */
+.grid {
+  display: grid;
+  /* minmax(220px, 1fr) asegura que entren hasta 5 en pantallas grandes */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 10px;
+}
+
+/* Diseño de cada tarjeta */
+.card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  /* Sombra más suave y moderna */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border: 1px solid transparent;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: #e2e8f0;
+}
+
+/* Estilo para las fotografías de los perros */
+.card img {
+  border-radius: 12px;
+  margin-bottom: 15px;
+  width: 100%;
+  height: 180px;
+  object-fit: cover; /* Esto asegura que la foto se recorte perfecto sin deformarse */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* Textos dentro de la tarjeta */
+.card h2 {
+  margin: 0 0 8px 0;
+  color: #102a43;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.card p {
+  margin: 4px 0;
+  color: #334e68;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.card p strong {
+  color: #d97706; /* Color ámbar para resaltar el número */
+  font-weight: 700;
+}
